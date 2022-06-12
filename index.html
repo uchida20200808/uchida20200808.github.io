@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>内田裕之のポートフォリオ</title>
-  <link rel="icon" href="images/favicon.png" border-radius:50%;>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="エンジニア転職を目指している内田裕之のポートフォリオサイトです。ウェブサイト作成や仕事に役立つプログラミングをブログやYouTube、Twitterで発信しています。ソースコードはGitHubでご覧ください。">
   <meta name="keywords" content="内田裕之,エンジニア転職,プログラミング,ポートフォリオ">
@@ -28,64 +29,45 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="">
-        <img src="images/logo.png" alt="内田裕之のポートフォリオ" class="icon">
-      </a>
-      <nav>
-        <ul class="main-nav">
-          <li><a href="">トップ</a></li>
-          <li><a href="greeting.html">あいさつ</a></li>
-          <li><a href="contact.html">問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="page-header wrapper">
+    <h1><a href=""><img src="images/logo.png" alt="内田裕之のポートフォリオ" class="logo"></a></h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="">トップ</a></li>
+        <li><a href="greeting.html">あいさつ</a></li>
+        <li><a href="contact.html">問い合わせ</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <div id="home" class="big-bg">
+    <div class="home-content wrapper">
+      <h2 class="page-title">one for all<br>all for one</h2>
+    </div>  
+  </div>
+  
   <main>
-    <section id="top">
-      <img src="images/top.JPG" alt="天理教久万山分教会の御前">
-    </section>
-    <section id="greeting">
-      <img src="images/haruyoshi.jpg" alt="天理教久万山分教会の会長" class="kaichyou">
-      <div class="comment">
-        <h1>陽気ぐらしでみんなが助け合える世界へ</h1>
-        <p>ご訪問ありがとうございます。<br>
-        愛媛県で天理教の布教活動を行っている久万山分教会です。<br>
-        天理教とは「身体は神様からの借り物で、心だけが自分のものである。」<br>
-        「神様を楽しませるためにみんなで助け合って明るく過ごそう」と教えている宗教です。<br>
-        教会には地域の皆様、またお困りごとや苦しみを抱えている方は天理教の信者問わず<br>
-        どなたでも参拝いただけます。<br>
-        お気軽にお越しくださいませ。</p>
-      </div>
-    </section>
-    <section id="news">
-      <h2>最新情報</h2>
-      <img src="images/topix20220617.png" alt="天理教の月次祭を行います">
-    </section>
-    <section id="sns">
-      <h2>Instagramをフォローしよう</h2>
-      <div class="instagram">
-        <a href="https://www.instagram.com/tenri_kumayama/" target="_blank">
-          <img src="images/instagram.PNG" alt="天理教久万山分教会のInstagram" class="instagram">
-        </a>
-      </div>
-      <p>久万山分教会では天理教の活動内容を公開するためにInstagramで情報発信をしています。<br>
-      <p>クイズやイベントも行っているのでぜひフォローいただけると嬉しいです。</p>
-      <p>画像をクリックするとアカウントをご覧いただけます。</p>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-      <a href="">
-        <img src="images/logo.png" alt="天理教久万山分教会のロゴ" class="icon">
-      </a>
-      <a href="tel:0892-21-0517">
-        <img src="images/call.png" alt="天理教久万山分教会へ電話" class="call">
-       </a>
+    <div class="main-content wrapper">
+      <article>
+        メインエリア部分
+      </article>
+      
+      <aside>
+        サイドバー部分
+      </aside>
     </div>
-    <div class="info">
-      <p>住所 〒791-1201 愛媛県上浮穴郡久万高原町久万９８</p>
+
+  </main>
+
+  <footer>
+    <nav>
+      <ul class="footer-nav">
+        <li><a href="">トップ</a></li>
+        <li><a href="menseki.html">免責事項</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+    </nav>
+    <div class="footer-sign">
       <p>All rights are reserved</p>
       <p>powered by 内田裕之</p>
     </div>
