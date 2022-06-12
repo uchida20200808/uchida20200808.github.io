@@ -75,6 +75,11 @@ a {
   text-transform: uppercase;
   font-weight: normal;
 }
+@media (max-width: 800px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
 
 /* 大きな背景画像 */
 .big-bg {
@@ -90,6 +95,18 @@ a {
   text-transform: uppercase;
 }
 
+/* MAIN */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+@media (max-width: 800px) {
+  .main-content {
+    flex-direction: column;
+  }
+ }
+
 /* 記事部分 */
 article {
   width: 74%;
@@ -101,10 +118,19 @@ article {
     width: 100%;
   }
 }
+.h2-title {
+  font-size: 1.375rem;
+  padding: 8px 8px;
+  border-bottom: 2px orange solid;
+  border-top: 2px orange solid;
+  margin-bottom: 16px;
+  background: rgba(253,149,50,0.3);
+  color: rgba(242,120,75);
+}
 .h3-title {
   font-size: 1.375rem;
   padding: 8px 8px;
-  margin-bottom: 16px;
+  margin: 16px 0;
   background: orange;
   color: #333;
   border-radius: 10px;
@@ -121,7 +147,7 @@ article {
     flex-direction: column;
   }
 }
-.content-box:hover {
+a .content-box:hover {
   opacity: 0.6;
 }
 .artpic {
@@ -138,6 +164,10 @@ article {
     margin-top: 8px;
   }
 }
+.list {
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
 
 
 /* サイドバー部分 */
@@ -153,16 +183,6 @@ aside {
 }
 
 
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-@media (max-width: 800px) {
-  .main-content {
-    flex-direction: column;
-  }
- }
 
 
 /* FOOTER */
