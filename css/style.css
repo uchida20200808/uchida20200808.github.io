@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #000;
+}
+a {
+  text-decoration: none;
+ }
+ a:hover {
+  opacity: 0.6;
+ }
+ img {
+  max-width: 100%;
+ }
+
+ /* HEADER */
+ .logo {
+  width: 350px;
+  margin-top: 14px;
+ }
+ .main-nav, 
+ .footer-nav {
+  display: flex;
+  font-size: 1.25rem;
+  margin-top: 34px;
+  list-style: none;
+ }
+ .main-nav li {
+  margin-left: 36px;
+ }
+ @media (max-width: 800px) {
+  .main-nav li {
+    margin-left: 16px;
+  }
+  }
+ .main-nav a,
+ .footer-nav a {
+  color: #000;
+ }
+ .main-nav a:hover,
+ .footer-nav a:hover {
+  opacity: 0.6;
+ }
+ .page-header {
+  display: flex;
+  justify-content: space-between;
+ }
+ @media (max-width: 800px) {
+  .page-header {
+    flex-direction: column;
+  }
+ }
+ .wrapper {
+  max-width: 1300px;
+  margin:  0 auto;
+  padding: 0 4%;
+ }
+
+/* HOME */
+.home-content {
+  text-align: center;
+}
+
+/* 見出し */
+.page-title {
+  font-size: 5rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position:  center top;
+  background-repeat: no-repeat;
+}
+#home {
+  background-image: url(../images/top.jpg);
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: uppercase;
+}
+
+/* 記事部分 */
+article {
+  width: 74%;
+  background: pink;
+}
+
+/* サイドバー部分 */
+aside {
+  width: 22%;
+  background: skyblue;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/* FOOTER */
+footer {
+  background: #c9c9c4;
+  margin-top: 32px;
+
+}
+.footer-nav  {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav li {
+  text-align: center;
+  margin: 32px 0;
+}
+.footer-sign p {
+  text-align: center;
+}
