@@ -96,6 +96,11 @@ article {
   /* background: pink; */
   margin-top: 32px;
 }
+@media (max-width: 800px) {
+  article {
+    width: 100%;
+  }
+}
 .h3-title {
   font-size: 1.375rem;
   padding: 8px 8px;
@@ -141,6 +146,12 @@ aside {
   /* background: skyblue; */
   margin-top: 32px;
 }
+@media (max-width: 800px) {
+  aside {
+    width: 100%;
+  }
+}
+
 
 .main-content {
   display: flex;
