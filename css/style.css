@@ -168,6 +168,10 @@ a .content-box:hover {
   padding-left: 16px;
   margin-bottom: 16px;
 }
+.content-link {
+  text-decoration: underline;
+  color: #0099ff;
+}
 
 
 /* サイドバー部分 */
