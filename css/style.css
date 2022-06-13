@@ -9,6 +9,15 @@ body {
   line-height: 1.7;
   color: #000;
 }
+p + p,
+p + h2,
+p + h3,
+a + a {
+  margin-top: 16px;
+}
+ul {
+  list-style-position: inside;
+}
 a {
   text-decoration: none;
   color: #333;
@@ -197,7 +206,7 @@ footer {
 }
 .footer-nav  {
   list-style: none;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
   display: flex;
