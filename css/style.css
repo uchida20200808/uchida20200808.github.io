@@ -34,37 +34,9 @@ a {
   width: 350px;
   margin-top: 14px;
  }
- .main-nav, 
- .footer-nav {
-  display: flex;
-  font-size: 1.25rem;
-  margin-top: 34px;
-  list-style: none;
- }
- .main-nav li {
-  margin-left: 36px;
- }
- @media (max-width: 800px) {
-  .main-nav li {
-    margin-left: 16px;
-  }
-  }
- .main-nav a,
- .footer-nav a {
-  color: #000;
- }
- .main-nav a:hover,
- .footer-nav a:hover {
-  opacity: 0.6;
- }
  .page-header {
   display: flex;
   justify-content: space-between;
- }
- @media (max-width: 800px) {
-  .page-header {
-    flex-direction: column;
-  }
  }
  .wrapper {
   max-width: 1300px;
@@ -87,6 +59,117 @@ a {
 @media (max-width: 800px) {
   .page-title {
     font-size: 3rem;
+  }
+}
+
+/* ハンバーガーメニュー部分 */
+.sp-menu {
+  margin-top: 16px;
+  margin-right: 8px;
+}
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  padding: 0 16px;
+  border: solid silver 0.5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sp-menu #open.hide {
+  display: none;
+}
+.overlay {
+  /* 固定表示 */
+  position: fixed;
+  /* 全画面表示 */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* 白色透明の画面 */
+  background: rgba(254, 180, 83, 0.95);
+  text-align: center;
+  padding: 64px;
+  /* 透明にする */
+  opacity: 0;
+  /* 選択できないようにする */
+  pointer-events: none;
+  transition:  opacity .6s;
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+.overlay a {
+  padding: 0 24px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.overlay a:hover {
+  opacity: 0.6;
+}
+
+
+/* PC版メニュー */
+.pc-menu {
+  display: none;
+}
+@media (min-width: 800px) {
+  .pc-menu {
+    display: flex;
+    font-size: 1.25rem;
+    margin-top: 34px;
+    list-style: none;
+  }
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .pc-menu a {
+    display: block;
+    padding: 0 24px;
+    line-height: 64px;
+    text-align: center;
+  }
+  .pc-menu a:hover {
+    opacity: 0.6;
+  }
+  .sp-menu {
+    display: none;
   }
 }
 
@@ -202,20 +285,23 @@ aside {
 footer {
   background: #c9c9c4;
   margin-top: 32px;
-
 }
-.footer-nav  {
+.footer-nav {
+  display: flex;
   list-style: none;
   max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
-  display: flex;
   justify-content: space-between;
 }
-.footer-nav li {
+ .footer-nav a {
+  color: #000;
+  line-height: 64px;
   text-align: center;
-  margin: 32px 0;
-}
+ }
+ .footer-nav a:hover {
+  opacity: 0.6;
+ }
 .footer-sign p {
   text-align: center;
 }
