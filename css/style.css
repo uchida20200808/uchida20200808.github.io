@@ -229,6 +229,7 @@ article {
 }
 .content-box {
   display: flex;
+  align-items: center;
   margin: 16px 4%;
   border: solid silver 1.5px;
   border-radius: 10px;
@@ -248,12 +249,27 @@ a .content-box:hover {
   width: 200px;
   height: 200px;
 }
+@media (max-width: 800px) {
+  .artpic  {
+    margin: 16px auto;
+    width: 60%;
+    height: 60%;
+  }
+}
 .caption {
   margin-top: 32px;
 }
 @media (max-width: 800px) {
   .caption  {
     margin-top: 8px;
+  }
+}
+.caption p {
+  margin: 8px 0;
+}
+@media (max-width: 800px) {
+  .caption  {
+    margin: 8px 8px;
   }
 }
 .list {
