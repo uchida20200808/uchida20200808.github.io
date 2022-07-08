@@ -261,8 +261,9 @@ main {
 /* 記事部分 */
 article {
   width: 74%;
-  /* background: skyblue; */
+  background: white;
   margin-top: 32px;
+  padding: 16px
 }
 @media (max-width: 800px) {
   article {
@@ -332,6 +333,11 @@ footer {
   margin: 0 auto;
   max-width: 600px;
   list-style: none;
+}
+@media (max-width: 800px) {
+  .footer-nav {
+    flex-direction: column;
+  }
 }
 .footer-nav li {
   display: inline-block;
