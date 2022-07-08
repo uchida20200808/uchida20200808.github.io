@@ -18,29 +18,47 @@ a + a {
 ul {
   list-style-position: inside;
 }
-a {
-  text-decoration: none;
-  color: #333;
- }
  a:hover {
   opacity: 0.6;
+  text-decoration: underline;
  }
  img {
   max-width: 100%;
  }
 
  /* HEADER */
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#home {
+  background-image: url(../images/top.jpg);
+  min-height: 90vh;
+}
+#eye-catch {
+  background-image: url(../images/blogcard.jpg);
+  min-height: 50vh;
+}
+
+/* ロゴ */
  .logo {
-  width: 350px;
-  margin-top: 14px;
+  width: 300px;
+  margin-top: 16px;
  }
+
+ /* ページヘッダー */
  .page-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
  }
+
+ /* 画面幅の書式 */
  .wrapper {
   max-width: 1300px;
-  margin:  0 auto;
+  margin: 0 auto;
   padding: 0 4%;
  }
 
@@ -52,9 +70,8 @@ a {
 /* 見出し */
 .page-title {
   font-size: 5rem;
+  color: white;
   font-family: 'Philosopher', serif;
-  text-transform: uppercase;
-  font-weight: normal;
 }
 @media (max-width: 800px) {
   .page-title {
@@ -65,12 +82,13 @@ a {
 /* ハンバーガーメニュー部分 */
 .sp-menu {
   margin-top: 16px;
-  margin-right: 8px;
+  margin-left: 8px;
 }
 .sp-menu #open {
   font-size: 32px;
   line-height: 64px;
   padding: 0 16px;
+  background: white;
   border: solid silver 0.5px;
   border-radius: 5px;
   cursor: pointer;
@@ -79,20 +97,15 @@ a {
   display: none;
 }
 .overlay {
-  /* 固定表示 */
   position: fixed;
-  /* 全画面表示 */
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  /* 白色透明の画面 */
   background: rgba(254, 180, 83, 0.95);
   text-align: center;
   padding: 64px;
-  /* 透明にする */
   opacity: 0;
-  /* 選択できないようにする */
   pointer-events: none;
   transition:  opacity .6s;
 }
@@ -134,13 +147,13 @@ a {
 .overlay a {
   padding: 0 24px;
   line-height: 64px;
-  text-align: center;
   font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
 }
 .overlay a:hover {
   opacity: 0.6;
 }
-
 
 /* PC版メニュー */
 .pc-menu {
@@ -151,47 +164,40 @@ a {
     display: flex;
     font-size: 1.25rem;
     margin-top: 34px;
-    list-style: none;
   }
   .pc-menu ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    display: flex;
+  }
+  .pc-menu li {
+    display: inline-block;
   }
   .pc-menu a {
     display: block;
+    text-decoration: none;
+    color: white;
     padding: 0 24px;
     line-height: 64px;
-    text-align: center;
   }
   .pc-menu a:hover {
     opacity: 0.6;
+    text-decoration: underline;
   }
   .sp-menu {
     display: none;
   }
 }
 
-/* 大きな背景画像 */
-.big-bg {
-  background-size: cover;
-  background-position:  center top;
-  background-repeat: no-repeat;
-}
-#home {
-  background-image: url(../images/top.jpg);
-  min-height: 100vh;
-}
-#home .page-title {
-  text-transform: uppercase;
+/* MAIN */
+main {
+  background-image: url(../images/background.png);
+  background-repeat: repeat;
 }
 
-/* MAIN */
 .main-content {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 @media (max-width: 800px) {
   .main-content {
@@ -199,10 +205,63 @@ a {
   }
  }
 
+ /* トップのタイル表示 */
+ .grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  padding: 6% 0;
+ }
+
+ /* タイルのアイテム */
+ .item {
+  margin: 0 16px;  
+ }
+ .item a {
+  text-decoration: none;
+  color: #333;
+ }
+ .item a:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+ .content-box {
+  border: solid silver 1.5px;
+  border-radius: 10px;
+  background: white;
+}
+.artpic {
+  margin-top: 16px;
+  text-align: center;
+}
+.artpic img {
+  border-radius: 10px;
+  width: 250px; 
+  height: 250px;
+  object-fit: cover;
+}
+@media (max-width: 800px) {
+  .artpic  {
+    text-align: center;
+    margin: 16px auto;
+  }
+  .artpic img {
+    width: 80%;
+    height: 80%;
+  }
+}
+.caption {
+  margin: 8px 16px;
+}
+.caption p {
+  font-size: 0.7rem;
+  color: gray;
+}
+
 /* 記事部分 */
 article {
   width: 74%;
-  /* background: pink; */
+  /* background: skyblue; */
   margin-top: 32px;
 }
 @media (max-width: 800px) {
@@ -210,6 +269,21 @@ article {
     width: 100%;
   }
 }
+
+/* パンくずリスト、日付、署名 */
+.bread-road {
+  font-size: 0.7rem;
+  color: gray;
+}
+.bread-road a {
+  text-decoration: none;
+  color: gray;
+}
+.bread-road a:hover {
+  text-decoration: underline;
+}
+
+/* 見出しの書式 */
 .h2-title {
   font-size: 1.375rem;
   padding: 8px 8px;
@@ -227,65 +301,15 @@ article {
   color: #333;
   border-radius: 10px;
 }
-.content-box {
-  display: flex;
-  align-items: center;
-  margin: 16px 4%;
-  border: solid silver 1.5px;
-  border-radius: 10px;
-  /* background: gray; */
-}
-@media (max-width: 800px) {
-  .content-box  {
-    flex-direction: column;
-  }
-}
-a .content-box:hover {
-  opacity: 0.6;
-}
-.artpic {
-  border-radius: 10%;
-  margin: 16px 16px;
-  width: 200px;
-  height: 200px;
-}
-@media (max-width: 800px) {
-  .artpic  {
-    margin: 16px auto;
-    width: 60%;
-    height: 60%;
-  }
-}
-.caption {
-  margin-top: 32px;
-}
-@media (max-width: 800px) {
-  .caption  {
-    margin-top: 8px;
-  }
-}
-.caption p {
-  margin: 8px 0;
-}
-@media (max-width: 800px) {
-  .caption  {
-    margin: 8px 8px;
-  }
-}
-.list {
-  padding-left: 16px;
-  margin-bottom: 16px;
-}
-.content-link {
-  text-decoration: underline;
-  color: #0099ff;
-}
+
+
+
 
 
 /* サイドバー部分 */
 aside {
   width: 22%;
-  /* background: skyblue; */
+  /* background: gold; */
   margin-top: 32px;
 }
 @media (max-width: 800px) {
@@ -299,24 +323,29 @@ aside {
 
 /* FOOTER */
 footer {
-  background: #c9c9c4;
-  margin-top: 32px;
+  background: orange;
+  padding-top: 32px;
 }
 .footer-nav {
   display: flex;
-  list-style: none;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1rem;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  list-style: none;
+}
+.footer-nav li {
+  display: inline-block;
 }
  .footer-nav a {
+  display: block;
   color: #000;
   line-height: 64px;
-  text-align: center;
+  padding: 0 24px;
+  text-decoration: none;
  }
  .footer-nav a:hover {
   opacity: 0.6;
+  text-decoration: underline;
  }
 .footer-sign p {
   text-align: center;
