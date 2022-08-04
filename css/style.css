@@ -398,11 +398,19 @@ footer {
   padding-top: 32px;
 }
 .footer-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 800px;
+}
+@media (max-width: 800px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+}
+.footer-nav ul {
   list-style: none;
 }
-/* .footer-nav li {
-  display: block;
-} */
  .footer-nav a {
   display: block;
   color: #000;
