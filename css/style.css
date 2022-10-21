@@ -27,26 +27,18 @@ ul {
  }
 
  /* HEADER */
-/* 大きな背景画像 */
-.big-bg {
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-#home {
-  background-image: url(../images/top.jpg);
-  min-height: 90vh;
-}
-#eye-catch {
-  background-image: url(../images/blogcard.jpg);
-  min-height: 50vh;
-}
 
 /* ロゴ */
  .logo {
   width: 300px;
-  margin-top: 16px;
+  margin-top: 8px;
  }
+ @media (max-width: 800px) {
+  .logo {
+    width: 200px;
+  }
+}
+
 
  /* ページヘッダー */
  .page-header {
@@ -175,7 +167,7 @@ ul {
   .pc-menu a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: #000;
     padding: 0 24px;
     line-height: 64px;
   }
