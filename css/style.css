@@ -180,6 +180,20 @@ ul {
   }
 }
 
+/* アイキャッチ */
+.top-img {
+  /* max-width: 1000px; */
+  text-align: center;
+}
+.top-img > img {
+  max-width: 1200px;
+}
+@media (max-width: 1000px) {
+  .top-img > img {
+    width: 100%;
+  }
+ }
+
 /* MAIN */
 main {
   background-image: url(../images/background.png);
@@ -310,7 +324,7 @@ article {
 
 /* 写真 */
 .content-img {
-  max-width: 500px;
+  width: 90%;
 }
 @media (max-width: 800px) {
   .content-img {
