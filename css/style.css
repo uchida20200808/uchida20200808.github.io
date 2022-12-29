@@ -15,7 +15,7 @@ p + h3,
 a + a {
   margin-top: 16px;
 }
-ul {
+ul,ol {
   list-style-position: inside;
 }
  a:hover {
