@@ -341,6 +341,10 @@ article {
   border-radius: 10px;
 }
 
+ol.content-list {
+  padding: 16px 4%;
+}
+
 /* 引用部分 */
 .content-ref {
   background: #eefaff;
