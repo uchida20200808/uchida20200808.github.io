@@ -209,59 +209,25 @@ main {
   .main-content {
     flex-direction: column;
   }
- }
+} 
 
- /* トップのタイル表示 */
- .grid {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  padding: 6% 0;
- }
-
- /* タイルのアイテム */
- .item {
-  margin: 0 16px;  
- }
- .item a {
-  text-decoration: none;
-  color: #333;
- }
- .item a:hover {
-  opacity: 0.6;
-  text-decoration: underline;
-}
- .content-box {
+ /* トップコンテンツ */
+ .top-content {
   border: solid silver 1.5px;
   border-radius: 10px;
   background: white;
-}
-.artpic {
+  padding: 6% 4%;
   margin-top: 16px;
+}
+
+.top-content h2 {
   text-align: center;
+  font-size: 200%;
 }
-.artpic img {
-  border-radius: 10px;
-  width: 250px; 
-  height: 250px;
-  object-fit: cover;
-}
-@media (max-width: 800px) {
-  .artpic  {
-    text-align: center;
-    margin: 16px auto;
-  }
-  .artpic img {
-    width: 80%;
-    height: 80%;
-  }
-}
-.caption {
-  margin: 8px 16px;
-}
-.caption p {
-  font-size: 0.7rem;
-  color: gray;
+
+.top-item {
+  border-bottom: solid silver 1.5px;
+  padding: 2% 0;
 }
 
 /* 記事部分 */
