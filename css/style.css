@@ -136,6 +136,9 @@ ul,ol {
 .overlay.show li:nth-child(3) {
   transition-delay: .3s;
 }
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
 .overlay a {
   padding: 0 24px;
   line-height: 64px;
