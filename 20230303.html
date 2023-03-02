@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pythonで投資のチャート分析をしよう【ゴールドvsドル指数】</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="「Pythonで投資のチャート分析をしたい」「プログラミングを使って効率よく稼ぎたい」この記事はそんな方へ向けて書いています。">
+  <meta name="keywords" content="投資,チャート分析,プログラミング,python,コード">
+  <meta property="og:url" content="https://uchida20200808.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pythonで投資のチャート分析をしよう【ゴールドvsドル指数】">
+  <meta property="og:description" content="「Pythonで投資のチャート分析をしたい」「プログラミングを使って効率よく稼ぎたい」この記事はそんな方へ向けて書いています。">
+  <meta property="og:image" content="https://uchida20200808.github.io/images/website_make.jpg">
+  <meta name="google-site-verification" content="t5qlJ9c0Nn-c-uO6VRxSHQhuVhZY63D55FwFAWUc1Q8" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3XCTBQL0H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M3XCTBQL0H');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1416972317066306"
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <!-- ロゴとヘッダーメニュー -->
+    <div class="page-header wrapper">
+      <!-- ロゴ -->
+      <a href="index.html"><img src="images/logo.png" alt="マネーテック" class="logo"></a>
+      <!-- ハンバーガーメニューのアイコン -->
+      <div class="sp-menu">
+        <span class="material-icons" id="open">menu</span>
+      </div>
+       <!-- PC版メニュー -->
+       <div class="pc-menu">
+        <nav>
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="https://forms.gle/CrZxjWzfz6rrB4ah6" rel="nofollow" target="_blank">依頼する</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ハンバーガーメニューの内容 -->
+  <div class="overlay">
+    <span class="material-icons" id="close">close</span>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="https://forms.gle/CrZxjWzfz6rrB4ah6" rel="nofollow" target="_blank">依頼する</a></li>
+      </ul>
+    </nav>
+  </div> 
+  <main>
+    <div class="main-content wrapper">
+      <article>
+
+        <!-- タイトル -->
+        <h1>Pythonで投資のチャート分析をしよう【ゴールドvsドル指数】</h1>
+  
+        <!-- ぱんくずリスト -->
+        <div class="bread-road">
+          <p><a href="index.html">トップ</a>
+            >
+            <a href="#">ゴールドとドル指数の関係</a></p>
+        </div>
+
+        <!-- 日付と作成者 -->
+        <p class="bread-road">2023-03-03 by 内田裕之</p>
+
+        <!-- ブログ記事のコンテンツ -->
+        <!-- 導入文 -->
+        <ul class="content-list">
+          <li>「Pythonで投資のチャート分析をしたい」</li>
+          <li>「プログラミングを使って効率よく稼ぎたい」</li>
+        </ul>
+        
+        <p>この記事はそんな方へ向けて書いています。</p>
+        <p>こんにちは。</p>
+        <p>Pythonで投資のチャート分析をしているうっちゃんです。</p>
+        <p>私は最低限の投資で最大の利益を目指して投資分析をしています。</p>
+        <p>今回は<span>ゴールドとドル指数の関係</span>を分析したので紹介します。</p>
+        <p>投資とプログラミング学習に役立つと嬉しいです。</p>
+
+        <!-- 目次 -->
+        <div class="content-index">
+          <p>■目次</p>
+          <ol>
+            <li><a href="#index1">チャート分析ならPythonがおすすめ</a></li>
+            <ul>
+              <li><a href="#index1-1">ゴールドとドル指数の関係</a></li>
+              <li><a href="#index1-2">分析に使用したコード</a></li>
+            </ul>
+            <li><a href="#index2">まとめ</a></li>
+          </ol>
+        </div>
+  
+        <!-- 目次1のコンテンツ -->
+        <h2 class="h2-title" id="index1">チャート分析ならPythonがおすすめ</h2>
+        <img src="images/python_logo.png" alt="プログラミング言語Python" class="content-img" style="max-width:400px">
+        <p>よい投資先を見つけるためにエクセルを編集してグラフ作成するのは大変ですよね。</p>
+        <p>プログラミングを活用して簡単に分析できればいいなあと思ったのは私だけではないと思います。</p>
+        <p><span>書店で見かけた一冊の本をきっかけにこの悩みは解消されました。</span></p>
+        <p>　</p>
+        <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a href="//af.moshimo.com/af/c/click?a_id=2130854&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fa00be888a514d74ad97837e61f3aa353%2F" target="_blank" rel="nofollow" ><img src="https://thumbnail.image.rakuten.co.jp/ran/img/2001/0009/784/873/118/901/20010009784873118901_1.jpg?_ex=64x64" style="border: none;" /></a><img src="//i.moshimo.com/af/i/impression?a_id=2130854&p_id=54&pc_id=54&pl_id=616" width="1" height="1" style="border:none;"></div><div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a href="//af.moshimo.com/af/c/click?a_id=2130854&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fa00be888a514d74ad97837e61f3aa353%2F" target="_blank" rel="nofollow" >Ｐｙｔｈｏｎによるファイナンス データ駆動型アプローチに向けて  第２版/オライリ-・ジャパン/Ｙｖｅｓ　Ｈｉｌｐｉｓｃｈ</a><img src="//i.moshimo.com/af/i/impression?a_id=2130854&p_id=54&pc_id=54&pl_id=616" width="1" height="1" style="border:none;"><div class="kaerebalink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://kaereba.com" rel="nofollow" target="_blank">カエレバ</a></div></div><div class="kaerebalink-detail" style="margin-bottom:5px;"></div><div class="kaerebalink-link1" style="margin-top:10px;"><div class="shoplinkrakuten" style="display:inline;margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//af.moshimo.com/af/c/click?a_id=2130854&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fa00be888a514d74ad97837e61f3aa353%2F" target="_blank" rel="nofollow" >楽天市場</a><img src="//i.moshimo.com/af/i/impression?a_id=2130854&p_id=54&pc_id=54&pl_id=616" width="1" height="1" style="border:none;"></div><div class="shoplinkamazon" style="display:inline;margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//af.moshimo.com/af/c/click?a_id=2138236&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25B3%25E3%2582%25B9%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A" target="_blank" rel="nofollow" >Amazon</a><img src="//i.moshimo.com/af/i/impression?a_id=2138236&p_id=170&pc_id=185&pl_id=4062" width="1" height="1" style="border:none;"></div><div class="shoplinkyahoo" style="display:inline;margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//af.moshimo.com/af/c/click?a_id=2201620&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25B3%25E3%2582%25B9" target="_blank" rel="nofollow" >Yahooショッピング</a><img src="//i.moshimo.com/af/i/impression?a_id=2201620&p_id=1225&pc_id=1925&pl_id=18502" width="1" height="1" style="border:none;"></div></div></div><div class="booklink-footer" style="clear: left"></div></div>
+        <p>　</p>
+        <p>これは<span>プログラミング言語Pythonを使ってデータ系列の扱い、グラフ作成、自動売買、ポートフォリオ分析まで多岐にわたる分析を可能とする本</span>です。</p>
+        <p>今回はゴールドとドル指数の関係を分析するのに活躍しました。</p>
+        
+        <h3 class="h3-title" id="index1-1">ゴールドとドル指数の関係</h3>
+        <p><span>ドル指数とは、ユーロや円、ポンドなど主要な通貨に対する米ドルの強さを示した指数です。</span></p>
+        <p>一般的に、ドル指数が上昇していると主要通貨に対して米ドルが強い（買われる）と判断し、下落していると米ドルが弱い（売られる）と判断します。</p>
+        <p>（参考：<a href="https://www.oanda.jp/lab-education/tradingviewstrategy/oanda-fx-trade/usd_index/" rel="nofollow" target="_blank">ドル指数のリアルタイム更新チャートをTradingViewで表示する</a>）</p>
+        <p>バフェット太郎さんのYouTube動画で<span>ドル指数はゴールドと逆相関の関係にある</span>と紹介されています。</p>
+        <p>ただしデータできちんと確認したことがなかったので、今回Pythonでチャートを作成しました。</p>
+        <p>作成したチャートがこちら。</p>
+        <img src="images/gold_dollarindex.png" alt="ゴールドとドル指数の関係" class="content-img">
+        <p>黄色はゴールドの価格、灰色はドル指数です。</p>
+        <p><span>ドル指数が下落するとゴールドが値上がりする傾向がたしかに見られます。</span></p>
+        <p>このことから<span>ゴールドの価格予想をするときにドル指数が使える</span>といえます。</p>
+        <p>ちなみに最近のドル指数は上昇傾向にあり、ちょうど50週移動平均線にタッチしたところです。</p>
+        <img src="images/DXY_2023-03-03_07-26-17.png" alt="ドル指数" class="content-img">
+        <p>50週移動平均線を上にブレイクアウトすればゴールドは下落するでしょう。</p>
+        <p>逆に<span>反落すれば100週移動平均線、もしくは200週移動平均線をターゲットに下落します。</span></p>
+        <p>そうなればゴールドは大きく上昇して、<span>再び最高値を更新する可能性があります。</span></p>
+        <p>これからのドル指数の動きが気になりますね！</p>
+        
+        <h3 class="h3-title" id="index1-2">分析に使用したコード</h3>
+        <p>チャート分析に使用したPythonコードをまとめます。</p>
+        <p>なお、開発環境はJupyter Notebookを使用しています。</p>
+        <p>ゴールドとドル指数はYahoo!Fiananceから取得しました。</p>
+        
+        <div class="coding">
+          <p>#ライブラリーのインポート</p>
+          <p>from pandas_datareader import data</p>
+          <p>import pandas as pd</p>
+          <p>from pylab import mpl, plt</p>
+          <p>import numpy as np</p>
+          <p>import datetime</p>
+          <p>plt.style.use('seaborn')</p>
+          <p>mpl.rcParams['font.family'] = 'serif'</p>
+          <p>%matplotlib inline</p>
+          <p>&nbsp;</p>
+          <p>#データの期間</p>
+          <p>start = '2000-01-01'</p>
+          <p>end = datetime.date.today()</p>
+          <p>&nbsp;</p>
+          <p>#Yahoo!Financeからデータ取得</p>
+          <p>yf.pdr_override()</p>
+          <p>&nbsp;</p>
+          <p>#金価格のデータ、USD/once単位</p>
+          <p>gold_df = data.get_data_yahoo('GC=F', start, end)</p>
+          <p>gold_date = gold_df.index</p>
+          <p>gold_price = gold_df['Close']</p>
+          <p>&nbsp;</p>
+          <p>#ドル指数</p>
+          <p>dollar_df = data.get_data_yahoo('DX-Y.NYB', start, end)</p>
+          <p>dollar_date = dollar_df.index</p>
+          <p>dollar_price = dollar_df['Close']</p>
+          <p>&nbsp;</p>
+          <p>#グラフの作成</p>
+          <p>fig, ax1 = plt.subplots(figsize=(20,10))</p>
+          <p>plt.plot(gold_date, gold_price, label = 'Gold', color='y')</p>
+          <p>plt.ylim([250,2500])</p>
+          <p>plt.legend(loc=2, fontsize=18)</p>
+          <p>plt.xlabel('year', fontsize=18)</p>
+          <p>plt.ylabel('Gold Price(dollar)', fontsize=18)</p>
+          <p>ax2 = ax1.twinx()</p>
+          <p>plt.plot(dollar_date, dollar_price, label = 'Dollar Index', color='gray')</p>
+          <p>plt.ylim([70,160])</p>
+          <p>plt.legend(loc=1, fontsize=18)</p>
+          <p>plt.ylabel('Dollar Index', fontsize=18)</p>
+          <p>plt.savefig("gold_dollarindex.png")</p>
+        </div>
+        
+        <p>読み込むシンボルを変えれば色んな種類のチャート分析ができます。</p>
+        <p>引き続きいろんなチャート分析を紹介したいと思います。</p>
+
+        <!-- 目次2のコンテンツ -->
+        <h2 class="h2-title" id="index2">まとめ</h2>
+        <p>今回はPythonで投資のチャート分析をする方法を紹介しました。</p>
+        <p>コーディングは以下の本を参考にしています。</p>
+        <p>　</p>
+        <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a href="//af.moshimo.com/af/c/click?a_id=2130854&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fa00be888a514d74ad97837e61f3aa353%2F" target="_blank" rel="nofollow" ><img src="https://thumbnail.image.rakuten.co.jp/ran/img/2001/0009/784/873/118/901/20010009784873118901_1.jpg?_ex=64x64" style="border: none;" /></a><img src="//i.moshimo.com/af/i/impression?a_id=2130854&p_id=54&pc_id=54&pl_id=616" width="1" height="1" style="border:none;"></div><div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a href="//af.moshimo.com/af/c/click?a_id=2130854&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fa00be888a514d74ad97837e61f3aa353%2F" target="_blank" rel="nofollow" >Ｐｙｔｈｏｎによるファイナンス データ駆動型アプローチに向けて  第２版/オライリ-・ジャパン/Ｙｖｅｓ　Ｈｉｌｐｉｓｃｈ</a><img src="//i.moshimo.com/af/i/impression?a_id=2130854&p_id=54&pc_id=54&pl_id=616" width="1" height="1" style="border:none;"><div class="kaerebalink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://kaereba.com" rel="nofollow" target="_blank">カエレバ</a></div></div><div class="kaerebalink-detail" style="margin-bottom:5px;"></div><div class="kaerebalink-link1" style="margin-top:10px;"><div class="shoplinkrakuten" style="display:inline;margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//af.moshimo.com/af/c/click?a_id=2130854&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fproduct.rakuten.co.jp%2Fproduct%2F-%2Fa00be888a514d74ad97837e61f3aa353%2F" target="_blank" rel="nofollow" >楽天市場</a><img src="//i.moshimo.com/af/i/impression?a_id=2130854&p_id=54&pc_id=54&pl_id=616" width="1" height="1" style="border:none;"></div><div class="shoplinkamazon" style="display:inline;margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//af.moshimo.com/af/c/click?a_id=2138236&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25B3%25E3%2582%25B9%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A" target="_blank" rel="nofollow" >Amazon</a><img src="//i.moshimo.com/af/i/impression?a_id=2138236&p_id=170&pc_id=185&pl_id=4062" width="1" height="1" style="border:none;"></div><div class="shoplinkyahoo" style="display:inline;margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"><a href="//af.moshimo.com/af/c/click?a_id=2201620&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25B3%25E3%2582%25B9" target="_blank" rel="nofollow" >Yahooショッピング</a><img src="//i.moshimo.com/af/i/impression?a_id=2201620&p_id=1225&pc_id=1925&pl_id=18502" width="1" height="1" style="border:none;"></div></div></div><div class="booklink-footer" style="clear: left"></div></div>
+        <p>　</p>
+        <p>この記事が面白いと思ったらTwitterやブログで紹介していただけますと嬉しいです。</p>
+        
+        <h4>おすすめ記事</h4>
+        <p><a href="20221231.html">ロバートキヨサキが「2023年に金（ゴールド）は2倍に値上がりする」と予想した理由とは？</a></p>
+        <p><a href="20221224.html">2023年iDeCoのベストな投資先は【コモディティ】Pythonで投資分析した話</a></p>
+        <p><a href="20230106.html">【知らないと損】2023年にレバナスに投資してはいけない理由</a></p>
+        
+      </article>
+
+      <aside>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3NIZK0+BMJR1U+3S2C+60WN5" rel="nofollow">
+          <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=220915584703&wid=001&eno=01&mid=s00000017634001012000&mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=3NIZK0+BMJR1U+3S2C+60WN5" alt="">
+        <p>　</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3NCROC+81COS2+4GN2+62MDD" rel="nofollow">
+          <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=220625436486&wid=001&eno=01&mid=s00000020819001020000&mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3NCROC+81COS2+4GN2+62MDD" alt="">
+        <p>　</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3NCROC+3I7X0Y+2PS+15SEY9" rel="nofollow">
+          <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=220625436212&wid=001&eno=01&mid=s00000000352007019000&mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=3NCROC+3I7X0Y+2PS+15SEY9" alt="">
+        <p>　</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3NCROC+4Z7HV6+3T9Y+64JTD" rel="nofollow">
+          <img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=220625436301&wid=001&eno=01&mid=s00000017791001029000&mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3NCROC+4Z7HV6+3T9Y+64JTD" alt="">
+        <p>　</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3NCDKQ+2S0UEQ+20NK+699KH" rel="nofollow">
+          <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=220607162168&wid=001&eno=01&mid=s00000009416001051000&mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3NCDKQ+2S0UEQ+20NK+699KH" alt="">
+        <p>　</p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=3NCDKQ+2XZ6GI+3PDY+BZVU9" rel="nofollow">
+          <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=220607162178&wid=001&eno=01&mid=s00000017287002015000&mc=1"></a>
+          <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3NCDKQ+2XZ6GI+3PDY+BZVU9" alt="">
+        <p>　</p>
+        <a href="https://h.accesstrade.net/sp/cc?rk=0100lpse00lqe9" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100lpse00lqe9" alt="" border="0" /></a>
+        <p>　</p>
+        <a href="https://h.accesstrade.net/sp/cc?rk=0100orcv00lqe9" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100orcv00lqe9" alt="お金の教養講座" border="0" /></a>
+        <p>　</p>
+        <a href="https://h.accesstrade.net/sp/cc?rk=01004qay00lqe9" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=01004qay00lqe9" alt="【DMM FX】入金" border="0" /></a>
+        <p>　</p>
+        <a href="https://h.accesstrade.net/sp/cc?rk=01006ko100lqe9" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=01006ko100lqe9" alt="【DMM CFD】入金" border="0" /></a>
+        
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="menseki.html">免責事項</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://tenri-kumayama.business.site/" target="_blank" rel="nofollow">天理教サイト</a></li>
+        <li><a href="https://tsumawosettoku20200808.com/" target="_blank" rel="nofollow">プログラミングサイト</a></li>
+      </ul>
+    </div>
+      
+    <div class="footer-sign">
+      <p>All rights are reserved<br>
+      powered by <a href="https://uchida20200808.github.io/">内田裕之</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
