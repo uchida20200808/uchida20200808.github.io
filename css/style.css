@@ -335,6 +335,12 @@ ol.content-list {
   padding: 8px 32px;
 }
 
+button {
+  display: block;
+  margin: 16px auto;
+}
+
+
 /* 文字の装飾 */
 main span {
   font-weight: bold;
